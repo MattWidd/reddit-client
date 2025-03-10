@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchPosts } from "./api/redditAPI";
+import Navbar from "./components/Navbar";
+import MainSection from "./components/MainSection";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -22,19 +24,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Reddit Client</h1>
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <a href={`https://www.reddit.com${post.permalink}`} target="_blank" rel="noopener noreferrer">
-              {post.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className="app">
+      <Navbar />
+      <MainSection posts={posts} loading={loading} error={error} />
     </div>
   );
 }
