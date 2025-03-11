@@ -16,6 +16,7 @@
     "redux": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://mattwidd.github.io/reddit-client",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
