@@ -1,6 +1,7 @@
 import React from "react";
+import Post from "./Post";
 
-const MainSection = ({ posts, loading, error }) => {
+const MainSection = ({ posts, loading, error, accessToken }) => {
   return (
     <main className="main-section">
       <h2>Top Reddit Posts</h2>
@@ -8,11 +9,7 @@ const MainSection = ({ posts, loading, error }) => {
       {error && <p>{error}</p>}
       <ul>
         {posts.map((post) => (
-          <li key={post.id}>
-            <a href={`https://www.reddit.com${post.permalink}`} target="_blank" rel="noopener noreferrer">
-              {post.title}
-            </a>
-          </li>
+          <Post key={post.id} post={post} accessToken={accessToken} />
         ))}
       </ul>
     </main>

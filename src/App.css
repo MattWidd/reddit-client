@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar input {
+  width: 300px; /* Long and thin */
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd; /* Light grey border */
+  border-radius: 20px; /* Rounded edges */
+  background-color: #f5f5f5; /* Solid grey background */
+  color: #333; /* Text color */
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar input:hover {
+  background-color: #d9d9d9;
+}
+
+.navbar input:focus {
+  background-color: white; /* White background when clicked */
+  border-color: #0079d3; /* Light blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.navbar input::placeholder {
+  color: #888; /* Light grey placeholder text */
+}
+
+
+.main-section {
+  justify-self: center;
+  padding: 20px;
+  width: 70%;
+}
+
+.main-section ul {
+  list-style-type: none; /* Removes the default dots */
+  padding: 0; /* Remove default padding for the list */
+}
+
+.main-section li {
+  margin-bottom: 20px; /* Adds spacing between list items */
+  background-color: white; /* Make the post background white */
+  padding: 20px; /* Adds padding inside the post */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.main-section li:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+.post {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.post h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.post p {
+  font-size: 1em;
+  color: #333;
+}
+
+.post a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}
+.post {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.post-image,
+.post-video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.vote-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.vote-buttons .active {
+  color: orange;
+}
+
+.vote-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.vote-buttons button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.vote-buttons button:hover {
+  background-color: #ddd;
+}
+
+.vote-buttons button:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.navbar button {
+  width: 200px; /* Long and thin */
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd; /* Light grey border */
+  border-radius: 20px; /* Rounded edges */
+  background-color: #f5f5f5; /* Solid grey background */
+  color: #606060; /* Text color */
+}
+
+.navbar button:hover {
+  background-color: #d9d9d9;
 }
